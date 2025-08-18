@@ -5,10 +5,10 @@ import java.util.ArrayList;
  * Bao gồm bàn cờ, lịch sử nước đi và logic di chuyển quân cờ.
  */
 public class Game {
-    /** Bàn cờ hiện tại */
+    /** Bàn cờ hiện tại. */
     private Board board;
 
-    /** Lịch sử các nước đi đã thực hiện */
+    /** Lịch sử các nước đi đã thực hiện. */
     private ArrayList<Move> moveHistory;
 
     /**
@@ -55,8 +55,8 @@ public class Game {
      * @return true nếu di chuyển thành công, false nếu không hợp lệ
      */
     public boolean movePiece(Piece piece, int toX, int toY) {
-        int fromX = piece.getCoordinatesX();
-        int fromY = piece.getCoordinatesY();
+        final int fromX = piece.getCoordinatesX();
+        final int fromY = piece.getCoordinatesY();
 
         // Kiểm tra nước đi có hợp lệ không
         if (!board.validate(toX, toY) || !piece.canMove(board, toX, toY)) {
