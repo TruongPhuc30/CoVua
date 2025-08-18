@@ -60,42 +60,7 @@ public class Move {
         return startY;
     }
 
-    public void setStartY(int startY) {
-        this.startY = startY;
-    }
-
-    public int getEndX() {
-        return endX;
-    }
-
-    public void setEndX(int endX) {
-        this.endX = endX;
-    }
-
-    public int getEndY() {
-        return endY;
-    }
-
-    public void setEndY(int endY) {
-        this.endY = endY;
-    }
-
-    public Piece getKilledPiece() {
-        return killedPiece;
-    }
-
-    public void setKilledPiece(Piece killedPiece) {
-        this.killedPiece = killedPiece;
-    }
-
-    /**
-     * Trả về mô tả nước đi theo ký hiệu đại số.
-     * Ví dụ: "white-Ra7" nghĩa là quân Xe trắng đi đến ô a7.
-     * @return chuỗi mô tả nước đi
-     */
-    @Override
-    public String toString() {
-        char col = (char) ('a' + endX - 1); // chuyển endX thành ký hiệu cột
+    publi2); // chuyển endX thành ký hiệu cột
         return movedPiece.getColor() + "-" + movedPiece.getSymbol() + col + endY;
     }
 }
