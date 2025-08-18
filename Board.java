@@ -14,6 +14,15 @@ public class Board {
     /** Danh sách các quân cờ đang có trên bàn */
     private ArrayList<Piece> pieces = new ArrayList<>();
 
+    /**nhan ve cac quan co tren ban */
+    public ArrayList<Piece> getPieces() {
+        return pieces;
+    }
+
+    public void setPieces(ArrayList<Piece> pieces) {
+        this.pieces = pieces;
+    }
+    
     /**
      * Kiểm tra xem tọa độ (x, y) có nằm trong phạm vi bàn cờ không.
      * @param x tọa độ X (cột)
