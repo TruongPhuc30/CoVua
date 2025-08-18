@@ -74,7 +74,7 @@ public class Game {
         piece.setCoordinatesY(toY);
 
         // Ghi lại nước đi
-        Move move = new Move(piece, fromX, fromY, toX, toY, captured);
+        Move move = new Move(fromX, fromY, toX, toY, piece, captured);
         moveHistory.add(move);
 
         return true;
