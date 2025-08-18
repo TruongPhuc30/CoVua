@@ -54,13 +54,19 @@ public class Game {
      * @param toY tọa độ Y đích
      * @return true nếu di chuyển thành công, false nếu không hợp lệ
      */
-    public boolean movePiece(Piece piece, int toX, int toY) {
-        final int fromX = piece.getCoordinatesX();
-        final int fromY = piece.getCoordinatesY();
+    public void movePiece(Piece piece, int toX, int toY) {
+        int fromX = piece.getCoordinatesX();
+        int fromY = piece.getCoordinatesY();
 
         // Kiểm tra nước đi có hợp lệ không
-        if (!board.validate(toX, toY) || !piece.canMove(board, toX, toY)) {
-            return false;
+        if (!board.validate(toX, toY)) {
+            System.out.println("Ô đích không hợp lệ: (" + toX + "," + toY + ")");
+            return;
+        }
+
+        if (!piece.canMove(board, toX, toY)) {
+            System.out.println("Quân " + piece.getSymbol() + " không thể di chuyển đến (" + toX + "," + toY + ")");
+            return;
         }
 
         // Kiểm tra có quân bị ăn không
@@ -76,8 +82,6 @@ public class Game {
         // Ghi lại nước đi
         Move move = new Move(fromX, fromY, toX, toY, piece, captured);
         moveHistory.add(move);
-
-        return true;
     }
 
     /**
