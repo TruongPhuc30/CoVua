@@ -94,7 +94,7 @@ public class Move {
      */
     @Override
     public String toString() {
-        char col = (char) ('a' + endX - startX + 1); // chuyển endX thành ký hiệu cột
+        char col = (char) ('a' + endX + 3); // chuyển endX thành ký hiệu cột
         return movedPiece.getColor() + "-" + movedPiece.getSymbol() + col + endY;
     }
 }
