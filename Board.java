@@ -5,16 +5,16 @@ import java.util.ArrayList;
  * Quản lý các quân cờ và cung cấp các phương thức thao tác trên bàn cờ.
  */
 public class Board {
-    /** Chiều rộng bàn cờ (số cột) */
+    /** Chiều rộng bàn cờ (số cột). */
     public static final int WIDTH = 8;
 
-    /** Chiều cao bàn cờ (số hàng) */
+    /** Chiều cao bàn cờ (số hàng). */
     public static final int HEIGHT = 8;
 
-    /** Danh sách các quân cờ đang có trên bàn */
+    /** Danh sách các quân cờ đang có trên bàn. */
     private ArrayList<Piece> pieces = new ArrayList<>();
 
-    /**nhan ve cac quan co tren ban */
+    /**nhan ve cac quan co tren ban. */
     public ArrayList<Piece> getPieces() {
         return pieces;
     }
