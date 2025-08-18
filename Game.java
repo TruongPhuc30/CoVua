@@ -52,11 +52,10 @@ public class Game {
      * @param piece quân cờ cần di chuyển
      * @param toX tọa độ X đích
      * @param toY tọa độ Y đích
-     * @return true nếu di chuyển thành công, false nếu không hợp lệ
      */
     public void movePiece(Piece piece, int toX, int toY) {
-        int fromX = piece.getCoordinatesX();
-        int fromY = piece.getCoordinatesY();
+        final int fromX = piece.getCoordinatesX();
+        final int fromY = piece.getCoordinatesY();
 
         // Kiểm tra nước đi có hợp lệ không
         if (!board.validate(toX, toY)) {
@@ -65,7 +64,8 @@ public class Game {
         }
 
         if (!piece.canMove(board, toX, toY)) {
-            System.out.println("Quân " + piece.getSymbol() + " không thể di chuyển đến (" + toX + "," + toY + ")");
+            System.out.println("Quân " + piece.getSymbol() 
+                               + " không thể di chuyển đến (" + toX + "," + toY + ")");
             return;
         }
 
