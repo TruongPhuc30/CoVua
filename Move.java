@@ -59,7 +59,8 @@ public class Move {
     public int getStartY() {
         return startY;
     }
-   public void setStartY(int startY) {
+    
+    public void setStartY(int startY) {
         this.startY = startY;
     }
 
